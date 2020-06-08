@@ -119,7 +119,7 @@ if __name__ == "__main__":
         new_df = pd.concat([data_temp, df], axis=1)  # Append info to generated paraphrases.
         new_df["lang"] = t  # Add language column.
 
-        new_df.to_csv("temp/tpc100_augmented_%s.csv" % t, encoding="utf8")  # Keep copies if failure at some point.
+        new_df.to_csv("temp/%s_augmented_%s.csv" % (filename, t), encoding="utf8")  # Keep copies if failure at some point.
 
         data_aug = pd.concat([data_aug, new_df], axis=0)  # Append to all augmented data.
 
